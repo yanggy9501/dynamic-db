@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>dynamic-db-mybatis</module>
+        <module>dynamic-db-framework</module>
     </modules>
 
     <properties>
