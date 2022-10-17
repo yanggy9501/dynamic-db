@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    # 下面都是自定义的，需要自己解析处理
+    datasource1:
+      url: jdbc:mysql://hadoop101:3306/db_test?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+    datasource2:
+      url: jdbc:mysql://192.168.134.128:3306/db_test?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+# mybatis 插件: 插件设置数据源
+#  mybatis:
+#    configuration:
+#      interceptors:
+#        - com.db.jdk.plugin.DynamicDataSourcePlugin
